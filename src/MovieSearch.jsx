@@ -20,16 +20,13 @@ const MovieSearch = (props) => {
 
   ///////////////// keybord enter key not working ///////////////////////////
   const something = (event) => {
-    if (event.keyCode === "13") {
-      console.log("Enter");
-      return submitInput;
-    }
+    
   };
   ///////////////// keybord enter key not working ///////////////////////////
   return (
     <div className="search">
       <input
-        placeholder="Search Movie Here..........."
+        placeholder="Search Here..........."
         value={searchTitle}
         onChange={getInput}
       />

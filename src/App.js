@@ -6,13 +6,13 @@ import MovieSearch from './MovieSearch.jsx';
 import Footer from "./Footer"
 
 
-
-const API_URL = "http://www.omdbapi.com?apikey=e23ea4e0";
+const api_key = process.env.REACT_APP_API_KEY;
+const API_URL = `http://www.omdbapi.com?apikey=${api_key}`;
 
 const App = () => {
 
   const [movies, setMovies] = useState([]);
-  const [searchTitle, setSearchTitle] = useState();
+  // const [searchTitle, setSearchTitle] = useState();
 
   /////////////////////////////  Setup for Getting Data from API ////////////////////////////
   const searchMovie = async (movieName) => {
@@ -22,7 +22,7 @@ const App = () => {
   }
   
   useEffect(() => {
-    searchMovie("Avengers");
+    searchMovie();
   }, []);
   
   
